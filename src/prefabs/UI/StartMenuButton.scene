@@ -1,0 +1,155 @@
+{
+    "id": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+    "sceneType": "PREFAB",
+    "settings": {
+        "snapEnabled": true,
+        "exportClass": true,
+        "autoImport": true,
+        "generateAwakeHandler": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1600,
+        "borderHeight": 900
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "25883ecb-9aca-46f3-82a4-8a65c0f4c38a",
+            "label": "container_1",
+            "components": [
+                "InteractiveObject",
+                "MouseHandler"
+            ],
+            "MouseHandler.onClick": "() => {this.onClick() }",
+            "MouseHandler.onHover": "() => {this.doBtnHover()}",
+            "MouseHandler.onOut": "() => {this.doBtnOut()}",
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "49e9d603-50f9-4a85-9494-493e8f533529",
+                    "label": "shadow_container",
+                    "components": [],
+                    "x": 1,
+                    "y": 23,
+                    "list": [
+                        {
+                            "type": "Polygon",
+                            "id": "d5250645-e703-465b-b042-aae5d36be452",
+                            "label": "poly_shadow_2",
+                            "components": [],
+                            "y": 2,
+                            "originX": 0,
+                            "originY": 1,
+                            "alpha": 0.1,
+                            "isFilled": true,
+                            "fillColor": "#142238",
+                            "points": "0 24 0 55 343 55 360 38 360 16 8 16"
+                        },
+                        {
+                            "type": "Polygon",
+                            "id": "25f96709-5e80-4e56-b8d4-e55cb197044f",
+                            "label": "poly_shadow",
+                            "components": [],
+                            "x": 1,
+                            "y": 1,
+                            "originX": 0,
+                            "originY": 1,
+                            "alpha": 0.1,
+                            "isFilled": true,
+                            "fillColor": "#142238",
+                            "points": "0 23 0 53 342 53 358 37 358 16 7 16"
+                        },
+                        {
+                            "type": "Polygon",
+                            "id": "17adbbfa-8e71-4e62-b33f-8f749092eaac",
+                            "label": "poly_shadow_1",
+                            "components": [],
+                            "x": 2,
+                            "originX": 0,
+                            "originY": 1,
+                            "alpha": 0.1,
+                            "isFilled": true,
+                            "fillColor": "#142238",
+                            "points": "0 22 0 51 341 51 356 36 356 16 6 16"
+                        }
+                    ]
+                },
+                {
+                    "type": "Polygon",
+                    "id": "1c693060-fcc5-4fde-a92b-5022e1b5076b",
+                    "label": "poly_bg_border",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 4,
+                    "y": 22,
+                    "originX": 0,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#0b416b",
+                    "points": "0 21 0 49 340 49 354 35 354 16 5 16"
+                },
+                {
+                    "type": "Polygon",
+                    "id": "2d90b181-cf38-4b93-aa52-89720d02caf2",
+                    "label": "poly_bg_color",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 6,
+                    "y": 20,
+                    "originX": 0,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#1c2028",
+                    "strokeColor": "#0b416b",
+                    "lineWidth": 2,
+                    "points": "0 20 0 45 337 45 350 32 350 16 4 16"
+                },
+                {
+                    "type": "Text",
+                    "id": "3adecde2-b352-41aa-9bfb-895f8010bc42",
+                    "label": "btn_text",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 48,
+                    "y": 10,
+                    "text": "Button text",
+                    "fontFamily": "Rajdhani",
+                    "fontSize": "22px",
+                    "color": "#58e6f3"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "btn_label",
+            "label": "Button text",
+            "tooltip": "Displayed text on the button",
+            "defValue": "Button text",
+            "customDefinition": false,
+            "type": {
+                "id": "string"
+            }
+        },
+        {
+            "name": "onClick",
+            "label": "onClick",
+            "tooltip": "On button click callback",
+            "defValue": "() => {}",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "()=>void"
+            }
+        }
+    ]
+}

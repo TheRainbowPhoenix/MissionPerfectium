@@ -1,0 +1,8 @@
+{
+    "plugins": [],
+    "skip": [
+        "dist",
+        "node_modules",
+        "test_nwjs"
+    ]
+}

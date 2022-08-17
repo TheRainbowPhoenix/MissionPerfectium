@@ -1,0 +1,160 @@
+{
+    "id": "013fd735-c522-4746-97e1-36055e2f19b4",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "StartMenu",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1600,
+        "borderHeight": 900
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "0b5b8cd4-b3b1-428e-bf4c-1d5356eab695",
+            "label": "bg_rect",
+            "components": [],
+            "x": 800,
+            "y": 450,
+            "isFilled": true,
+            "fillColor": "#0f1319",
+            "width": 1600,
+            "height": 900
+        },
+        {
+            "type": "Image",
+            "id": "a67c8e79-e0d6-4a59-ab51-70fd26d8386b",
+            "label": "image_1",
+            "components": [],
+            "texture": {
+                "key": "waifu_bg_2"
+            },
+            "x": 802,
+            "y": 451,
+            "scaleX": 0.85,
+            "scaleY": 0.85,
+            "alphaBottomLeft": 0
+        },
+        {
+            "type": "Layer",
+            "id": "586d6e6a-7226-45f0-80a7-8a3f72bab669",
+            "label": "actionable_layer",
+            "components": [],
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "bb0cce9b-a81f-45ec-8b5d-1a07313c5c31",
+                    "label": "container_2",
+                    "components": [],
+                    "x": 80,
+                    "y": 620,
+                    "list": [
+                        {
+                            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+                            "id": "5e09c9b6-85de-4e59-a4ca-45c657ca7c61",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "btn_label",
+                                "onClick"
+                            ],
+                            "label": "NewGameBtn",
+                            "btn_label": "New Game Plus",
+                            "onClick": "() => {}",
+                            "components": [],
+                            "x": 0,
+                            "y": 0,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+                            "id": "191bd1a7-b762-4f4b-9a82-cd9555607eb5",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "btn_label"
+                            ],
+                            "label": "ContinueBtn",
+                            "btn_label": "Continue",
+                            "components": [],
+                            "x": 0,
+                            "y": 40,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+                            "id": "9a5baeda-a2bb-4723-b59c-d649d1ebf965",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "btn_label"
+                            ],
+                            "label": "SettingsBtn",
+                            "btn_label": "Settings",
+                            "components": [
+                                "StartSceneOnClick"
+                            ],
+                            "StartSceneOnClick.sceneKey": "SettingsScreen",
+                            "x": 0,
+                            "y": 80,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+                            "id": "56ca1717-d646-4e92-8452-19872eff683f",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "btn_label"
+                            ],
+                            "label": "BonusBtn",
+                            "btn_label": "Bonuses",
+                            "components": [],
+                            "x": 0,
+                            "y": 120,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+                            "id": "29d51b90-e417-442c-a25f-bebb12ce751f",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "btn_label"
+                            ],
+                            "label": "QuitBtn",
+                            "btn_label": "Quit Game",
+                            "components": [],
+                            "x": 0,
+                            "y": 160,
+                            "nestedPrefabs": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "lists": [
+        {
+            "id": "f4d838fd-412e-4695-9f6d-6bbba1f8d037",
+            "label": "MenuButtons",
+            "objectIds": [
+                "5e09c9b6-85de-4e59-a4ca-45c657ca7c61",
+                "191bd1a7-b762-4f4b-9a82-cd9555607eb5",
+                "9a5baeda-a2bb-4723-b59c-d649d1ebf965",
+                "56ca1717-d646-4e92-8452-19872eff683f",
+                "29d51b90-e417-442c-a25f-bebb12ce751f"
+            ]
+        }
+    ]
+}

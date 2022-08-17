@@ -1,0 +1,79 @@
+{
+    "id": "ce4acfea-afc5-4be4-8208-03b5ef787283",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "SettingsScreen",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1600,
+        "borderHeight": 900
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "d1c09e9e-6185-4b11-89f1-3ffabab26867",
+            "label": "bg_rect",
+            "components": [],
+            "originX": 0,
+            "originY": 0,
+            "isFilled": true,
+            "fillColor": "#0f1319",
+            "width": 1600,
+            "height": 900
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "f2c82c5b-8e3a-44da-bda0-5b7d0ccd0873",
+            "unlock": [
+                "x",
+                "y",
+                "btn_label"
+            ],
+            "label": "startMenuButton",
+            "btn_label": "Back Main Menu",
+            "components": [
+                "StartSceneOnClick"
+            ],
+            "StartSceneOnClick.sceneKey": "StartMenu",
+            "x": 391,
+            "y": 297,
+            "nestedPrefabs": []
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "28c357c5-4f6b-480b-a186-3006433c3584",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "startMenuButton_1",
+            "components": [],
+            "x": 389,
+            "y": 351,
+            "nestedPrefabs": []
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "558ed21e-2f4d-43ed-983f-d5d98ddb6c18",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "startMenuButton_2",
+            "components": [],
+            "x": 389,
+            "y": 405,
+            "nestedPrefabs": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

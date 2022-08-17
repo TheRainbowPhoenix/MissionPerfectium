@@ -1,0 +1,87 @@
+{
+    "components": [
+        {
+            "name": "PushOnClick",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "PreloadText",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Text",
+            "properties": []
+        },
+        {
+            "name": "MouseHandler",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Container",
+            "properties": [
+                {
+                    "name": "onClick",
+                    "label": "onClick",
+                    "tooltip": "On click callback",
+                    "defValue": "() => {}",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "()=>void"
+                    }
+                },
+                {
+                    "name": "onHover",
+                    "label": "onHover",
+                    "tooltip": "On hover callback",
+                    "defValue": "() => {}",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "()=>void"
+                    }
+                },
+                {
+                    "name": "onOut",
+                    "label": "onOut",
+                    "tooltip": "On pointer out callback",
+                    "defValue": "() => {}",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "()=>void"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "InteractiveObject",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Container",
+            "properties": []
+        },
+        {
+            "name": "StartSceneOnClick",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Container",
+            "properties": [
+                {
+                    "name": "sceneKey",
+                    "label": "Scene Key",
+                    "tooltip": "The key of the scene.",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "scene-key"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Object Script Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    },
+    "outputLang": "TYPE_SCRIPT",
+    "exportClass": true,
+    "autoImport": true
+}

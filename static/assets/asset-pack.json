@@ -1,0 +1,63 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/FufuSuperDino.png",
+                "type": "image",
+                "key": "FufuSuperDino"
+            },
+            {
+                "url": "assets/stub/perfectium.svg",
+                "svgConfig": {
+                    "width": 0,
+                    "height": 0,
+                    "scale": 0
+                },
+                "type": "svg",
+                "key": "perfectium"
+            },
+            {
+                "url": "assets/tank_blue.png",
+                "type": "image",
+                "key": "tank_blue"
+            },
+            {
+                "url": "assets/tank_green.png",
+                "type": "image",
+                "key": "tank_green"
+            },
+            {
+                "url": "assets/tank_red.png",
+                "type": "image",
+                "key": "tank_red"
+            },
+            {
+                "url": "assets/treeLarge.png",
+                "type": "image",
+                "key": "treeLarge"
+            },
+            {
+                "url": "assets/treeSmall.png",
+                "type": "image",
+                "key": "treeSmall"
+            },
+            {
+                "url": "assets/stub/waifu_bg.png",
+                "type": "image",
+                "key": "waifu_bg"
+            },
+            {
+                "url": "assets/stub/waifu_bg_2.png",
+                "type": "image",
+                "key": "waifu_bg_2"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
