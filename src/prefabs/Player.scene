@@ -15,10 +15,20 @@
             "type": "Image",
             "id": "b45a927c-4c0f-4520-a04c-95c26e191be5",
             "label": "tank_blue",
-            "components": [],
+            "components": [
+                "Physics",
+                "PhysicsBody"
+            ],
+            "Physics.bodyGravity": 501,
+            "PhysicsBody.bodyX": 12,
+            "PhysicsBody.bodyY": 16,
+            "PhysicsBody.bodyWidth": 8,
+            "PhysicsBody.bodyHeight": 16,
             "texture": {
-                "key": "tank_blue"
-            }
+                "key": "chara"
+            },
+            "x": 78,
+            "y": 37
         }
     ],
     "plainObjects": [],

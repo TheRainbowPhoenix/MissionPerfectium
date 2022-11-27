@@ -2,9 +2,9 @@
   "name": "mission-perfect",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build && phaser-asset-pack-hashing -j -r dist",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "editor": "phasereditor2d-launcher -project . -port 4555",
     "editor-remote": "phasereditor2d-launcher -project . -disable-open-browser -public -port 4555"
   },

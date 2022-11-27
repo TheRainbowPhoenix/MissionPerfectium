@@ -40,7 +40,8 @@
             "StartSceneOnClick.sceneKey": "StartMenu",
             "x": 391,
             "y": 297,
-            "nestedPrefabs": []
+            "nestedPrefabs": [],
+            "list": []
         },
         {
             "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
@@ -53,7 +54,8 @@
             "components": [],
             "x": 389,
             "y": 351,
-            "nestedPrefabs": []
+            "nestedPrefabs": [],
+            "list": []
         },
         {
             "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
@@ -66,7 +68,119 @@
             "components": [],
             "x": 389,
             "y": 405,
-            "nestedPrefabs": []
+            "nestedPrefabs": [],
+            "list": []
+        },
+        {
+            "type": "Container",
+            "id": "7b07fddb-7db5-475c-a363-b94d7e7c8c4d",
+            "label": "actions",
+            "components": [],
+            "x": 80,
+            "y": 820,
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "34033974-c075-4390-82d2-9520df6c9965",
+                    "label": "SelectBox",
+                    "components": [],
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "82b71c4e-047f-471e-bdec-e923fac73cda",
+                            "label": "SelectText",
+                            "components": [],
+                            "x": 32,
+                            "originY": 0.5,
+                            "text": "Select",
+                            "fontFamily": "Rajdhani",
+                            "fontSize": "24px"
+                        },
+                        {
+                            "type": "TileSprite",
+                            "id": "d23c5507-1376-455b-9611-8830c0920b77",
+                            "label": "a_tile_action",
+                            "components": [],
+                            "texture": {
+                                "key": "JoystickAtlas_Big",
+                                "frame": 10
+                            },
+                            "width": 47,
+                            "height": 47,
+                            "tileScaleX": 0.5,
+                            "tileScaleY": 0.5
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "6d25a449-8e2f-48c3-95a1-76852a1bd540",
+                    "label": "CancelBox",
+                    "components": [],
+                    "x": 150,
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "67944938-94db-43cb-aa0f-45b7f392cdc5",
+                            "label": "CancelText",
+                            "components": [],
+                            "x": 32,
+                            "originY": 0.5,
+                            "text": "Cancel",
+                            "fontFamily": "Rajdhani",
+                            "fontSize": "24px"
+                        },
+                        {
+                            "type": "TileSprite",
+                            "id": "6020ce8e-bf6f-42d9-8e05-fae9158ccd9a",
+                            "label": "b_tile_action",
+                            "components": [],
+                            "texture": {
+                                "key": "JoystickAtlas_Big",
+                                "frame": 11
+                            },
+                            "width": 47,
+                            "height": 47,
+                            "tileScaleX": 0.5,
+                            "tileScaleY": 0.5
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "e852f4f6-4269-4568-bc5b-f78acf3241cd",
+                    "label": "DeleteBox",
+                    "components": [],
+                    "x": 300,
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "a110c272-00fd-4256-bb77-f50a6a5aa97c",
+                            "label": "DeleteText",
+                            "components": [],
+                            "x": 32,
+                            "originY": 0.5,
+                            "text": "Delete",
+                            "fontFamily": "Rajdhani",
+                            "fontSize": "24px"
+                        },
+                        {
+                            "type": "TileSprite",
+                            "id": "eba0b830-caf3-4706-830d-fa6a17e8ed41",
+                            "label": "y_tile_action",
+                            "components": [],
+                            "texture": {
+                                "key": "JoystickAtlas_Big",
+                                "frame": 13
+                            },
+                            "width": 47,
+                            "height": 47,
+                            "tileScaleX": 0.5,
+                            "tileScaleY": 0.5
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -75,5 +189,16 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    }
+    },
+    "lists": [
+        {
+            "id": "50a460f0-d5d2-4681-8f87-a8b1ba371c9b",
+            "label": "SaveSlots",
+            "objectIds": [
+                "558ed21e-2f4d-43ed-983f-d5d98ddb6c18",
+                "28c357c5-4f6b-480b-a186-3006433c3584",
+                "f2c82c5b-8e3a-44da-bda0-5b7d0ccd0873"
+            ]
+        }
+    ]
 }

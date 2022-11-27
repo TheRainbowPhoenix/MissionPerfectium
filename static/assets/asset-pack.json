@@ -2,9 +2,47 @@
     "section1": {
         "files": [
             {
+                "url": "assets/stub/chara.png",
+                "type": "image",
+                "key": "chara"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
+            },
+            {
+                "url": "assets/stub/girl1.png",
+                "type": "image",
+                "key": "girl1"
+            },
+            {
+                "url": "assets/stub/girl144_96.png",
+                "type": "image",
+                "key": "girl144_96"
+            },
+            {
+                "url": "assets/UI/JoystickAtlas_Big.png",
+                "frameConfig": {
+                    "frameWidth": 94,
+                    "frameHeight": 94,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "JoystickAtlas_Big"
+            },
+            {
+                "url": "assets/L_Ground_G03.png",
+                "type": "image",
+                "key": "L_Ground_G03"
+            },
+            {
+                "url": "assets/model_sakiFront.png",
+                "type": "image",
+                "key": "model_sakiFront"
             },
             {
                 "url": "assets/stub/perfectium.svg",
@@ -30,6 +68,16 @@
                 "url": "assets/tank_red.png",
                 "type": "image",
                 "key": "tank_red"
+            },
+            {
+                "url": "assets/maps/test.json",
+                "type": "tilemapTiledJSON",
+                "key": "test"
+            },
+            {
+                "url": "assets/maps/tiles.png",
+                "type": "image",
+                "key": "tiles"
             },
             {
                 "url": "assets/treeLarge.png",

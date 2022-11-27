@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -15,8 +14,8 @@ export default class StartMenu extends Phaser.Scene {
 		super("StartMenu");
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
+    // Write your code here.
+    /* END-USER-CTR-CODE */
 	}
 
 	editorCreate(): void {
@@ -27,7 +26,7 @@ export default class StartMenu extends Phaser.Scene {
 		bg_rect.fillColor = 987929;
 
 		// image_1
-		const image_1 = this.add.image(802, 451, "waifu_bg_2");
+		const image_1 = this.add.image(644, 384, "waifu_bg_2");
 		image_1.scaleX = 0.85;
 		image_1.scaleY = 0.85;
 		image_1.alphaBottomLeft = 0;
@@ -36,7 +35,7 @@ export default class StartMenu extends Phaser.Scene {
 		const actionable_layer = this.add.layer();
 
 		// container_2
-		const container_2 = this.add.container(80, 620);
+		const container_2 = this.add.container(80, 519);
 		actionable_layer.add(container_2);
 
 		// NewGameBtn
@@ -66,8 +65,16 @@ export default class StartMenu extends Phaser.Scene {
 		newGameBtn.btn_label = "New Game Plus";
 		newGameBtn.onClick = () => {};
 
+		// newGameBtn (components)
+		const newGameBtnStartSceneOnClick = new StartSceneOnClick(newGameBtn);
+		newGameBtnStartSceneOnClick.sceneKey = "Level";
+
 		// continueBtn (prefab fields)
 		continueBtn.btn_label = "Continue";
+
+		// continueBtn (components)
+		const continueBtnStartSceneOnClick = new StartSceneOnClick(continueBtn);
+		continueBtnStartSceneOnClick.sceneKey = "SaveScreen";
 
 		// settingsBtn (prefab fields)
 		settingsBtn.btn_label = "Settings";
@@ -91,130 +98,128 @@ export default class StartMenu extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
-	private menuButtonsIndex!: number
-	private mypad?: Phaser.Input.Gamepad.Gamepad
-	private lastGamepadKey?: number
-	private emitter?: any
+  private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
+  private menuButtonsIndex!: number
+  private mypad?: Phaser.Input.Gamepad.Gamepad
+  private lastGamepadKey?: number
+  private emitter?: any
 
-	// Write your code here
+  // Write your code here
 
-	create() {
+  create() {
+    this.editorCreate()
 
-		this.editorCreate();
+    this.bindKeys()
 
-		this.bindKeys();
+    this.setupFx()
+  }
 
-		this.setupFx();
-	}
+  bindKeys() {
+    this.cursors = this.input.keyboard.createCursorKeys()
+    this.menuButtonsIndex = 0
 
-	bindKeys() {
+    // this.wasd = {
+    // 	jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE, true),
+    // 	left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT, true),
+    // 	right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT, true),
+    // 	crouch: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN, true)
+    // };
 
-		this.cursors = this.input.keyboard.createCursorKeys()
-		this.menuButtonsIndex = 0
+    this.menuButtons[this.menuButtonsIndex].doSelect(true)
 
-		// this.wasd = {
-		// 	jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE, true),
-		// 	left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT, true),
-		// 	right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT, true),
-		// 	crouch: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN, true)
-		// };
+    this.mypad = this.input.gamepad.pad1
+  }
 
-		this.menuButtons[this.menuButtonsIndex].doSelect(true)
+  setupFx() {
+    let particles = this.add.particles('star')
 
-		this.mypad = this.input.gamepad.pad1
-	}
+    this.emitter = particles.createEmitter({
+      speed: 100,
+      gravityY: 200,
+      lifespan: { min: 500, max: 1500 },
+      blendMode: 'ADD',
+    })
+    // this.emitter.startFollow(this.menuButtons[this.menuButtonsIndex]);
+    this.emitter.stop()
+  }
 
-	setupFx() {
-		let particles = this.add.particles('star')
+  selectButton(order: number) {
+    if (this.menuButtons.length == 0) {
+      return
+    }
 
-		this.emitter = particles.createEmitter({
-			speed: 100,
-			gravityY: 200,
-			lifespan: {min: 500, max: 1500},
-			blendMode: 'ADD'
-		})
-		// this.emitter.startFollow(this.menuButtons[this.menuButtonsIndex]);
-		this.emitter.stop();
-	}
+    if (order == 0) {
+      console.log('Do button click !')
+    } else {
+      console.log(this.menuButtonsIndex)
+      this.menuButtons[this.menuButtonsIndex].doSelect(false)
+      this.menuButtonsIndex =
+        (this.menuButtons.length + this.menuButtonsIndex + order) %
+        this.menuButtons.length
+      console.log(this.menuButtonsIndex)
+      this.menuButtons[this.menuButtonsIndex].doSelect(true)
+    }
+  }
 
-	selectButton(order: number) {
-		if (this.menuButtons.length == 0) {
-			return
-		}
+  update(t: number, dt: number) {
+    if (this.input.gamepad.pad1 && !this.mypad) {
+      this.mypad = this.input.gamepad.pad1
+    }
 
-		if (order == 0) {
-			console.log("Do button click !")
-		} else {
-			console.log(this.menuButtonsIndex)
-			this.menuButtons[this.menuButtonsIndex].doSelect(false);
-			this.menuButtonsIndex = (this.menuButtons.length + this.menuButtonsIndex + order) % this.menuButtons.length;
-			console.log(this.menuButtonsIndex)
-			this.menuButtons[this.menuButtonsIndex].doSelect(true);
-		}
-	}
+    let upJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up!)
+    let downJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.down!)
+    let spaceJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.space!)
 
-	update(t: number, dt: number) {
-		if (this.input.gamepad.pad1 && !this.mypad) {
-			this.mypad = this.input.gamepad.pad1
-		}
+    if (this.mypad) {
+      if (
+        this.mypad.leftStick.y < -0.4 ||
+        this.mypad.leftStick.y > 0.4 ||
+        this.mypad.isButtonDown(0)
+      ) {
+        if (
+          !this.lastGamepadKey ||
+          (this.lastGamepadKey > 0 && t - this.lastGamepadKey > 200)
+        ) {
+          upJustPressed = upJustPressed || this.mypad.leftStick.y < -0.4
+          downJustPressed = downJustPressed || this.mypad.leftStick.y > 0.4
+          spaceJustPressed = spaceJustPressed || this.mypad.isButtonDown(0)
 
-		let upJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up!)
-		let downJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.down!)
-		let spaceJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.space!)
+          this.lastGamepadKey = t
+        }
+      } else {
+      }
+    }
 
-		if (this.mypad) {
-			if (this.mypad.leftStick.y < -0.4 || this.mypad.leftStick.y > 0.4 || this.mypad.isButtonDown(0)) {
-				if (!this.lastGamepadKey || (this.lastGamepadKey > 0 && t - this.lastGamepadKey > 200)) {
-					upJustPressed = upJustPressed || this.mypad.leftStick.y < -0.4
-					downJustPressed = downJustPressed || this.mypad.leftStick.y > 0.4
-					spaceJustPressed = spaceJustPressed || this.mypad.isButtonDown(0)
+    if (upJustPressed || downJustPressed || spaceJustPressed) {
+      let lastitem =
+        (this.menuButtons.length + this.menuButtonsIndex + 1) %
+        this.menuButtons.length
+      this.emitter.setPosition(
+        this.menuButtons[lastitem].parentContainer.x,
+        this.menuButtons[lastitem].parentContainer.y +
+          this.menuButtons[lastitem].y +
+          24
+      )
+      // this.emitter.startFollow(this.menuButtons[this.menuButtonsIndex]);
+      this.emitter.start()
+    } else {
+      this.emitter.stop()
+    }
 
+    if (upJustPressed) {
+      console.log('up')
+      this.selectButton(-1)
+    } else if (downJustPressed) {
+      console.log(t, dt)
+      console.log('down')
+      this.selectButton(1)
+    } else if (spaceJustPressed) {
+      console.log('space')
+      this.selectButton(0)
+    }
+  }
 
-
-					this.lastGamepadKey = t
-				}
-			} else {
-
-			}
-		}
-
-		if (upJustPressed || downJustPressed || spaceJustPressed) {
-			let lastitem = (this.menuButtons.length + this.menuButtonsIndex +1) % this.menuButtons.length 
-			this.emitter.setPosition(
-				this.menuButtons[lastitem].parentContainer.x,
-				this.menuButtons[lastitem].parentContainer.y + this.menuButtons[lastitem].y + 24
-			)
-			// this.emitter.startFollow(this.menuButtons[this.menuButtonsIndex]);
-			this.emitter.start();
-		} else {
-			this.emitter.stop();
-		}
-
-
-
-
-
-
-		if (upJustPressed)
-		{
-			console.log("up");
-			this.selectButton(-1);
-		}
-		else if (downJustPressed)
-		{
-			console.log(t, dt)
-			console.log("down");
-			this.selectButton(1);
-		}
-		else if (spaceJustPressed)
-		{
-			console.log("space");
-			this.selectButton(0);
-		}
-	}
-
-	/* END-USER-CODE */
+  /* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */

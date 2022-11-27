@@ -8,8 +8,8 @@
         "createMethodName": "editorCreate",
         "sceneKey": "Level",
         "compilerOutputLanguage": "TYPE_SCRIPT",
-        "borderWidth": 1600,
-        "borderHeight": 900
+        "borderWidth": 640,
+        "borderHeight": 400
     },
     "displayList": [
         {
@@ -17,8 +17,8 @@
             "id": "5c228da6-971a-4347-84e8-9f62464ba76d",
             "label": "text",
             "components": [],
-            "x": 400,
-            "y": 436,
+            "x": 397,
+            "y": 229,
             "originX": 0.5,
             "originY": 0.5,
             "text": "TODO: My Game ",
@@ -36,15 +36,50 @@
             "label": "player",
             "scope": "CLASS",
             "components": [],
-            "x": 399,
-            "y": 280
+            "x": 96,
+            "y": 220
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "b6f32de3-b3e7-4650-a104-a3d1f4325197",
+            "label": "layer",
+            "scope": "CLASS",
+            "components": [],
+            "tilemapId": "cbbccb93-a6fc-4401-84e8-82115daacbbd",
+            "layerName": "Tile Layer 1",
+            "tilesets": [
+                "tiles"
+            ]
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "cbbccb93-a6fc-4401-84e8-82115daacbbd",
+            "type": "Tilemap",
+            "label": "map",
+            "key": "test",
+            "tilesets": [
+                {
+                    "name": "tiles",
+                    "imageKey": "tiles"
+                }
+            ]
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 3
-    }
+    },
+    "lists": [
+        {
+            "id": "d3ab8de9-9276-424d-a9bb-e869373e4576",
+            "label": "items"
+        },
+        {
+            "id": "3f47e052-4693-4201-9468-b4c0741df204",
+            "label": "enemies"
+        }
+    ]
 }

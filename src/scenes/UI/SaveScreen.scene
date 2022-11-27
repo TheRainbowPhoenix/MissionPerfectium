@@ -1,0 +1,102 @@
+{
+    "id": "2ff4216b-0979-4fd5-af03-cf97ed527ee9",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "SaveScreen",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1600,
+        "borderHeight": 900
+    },
+    "displayList": [
+        {
+            "type": "Rectangle",
+            "id": "c6d5d8e9-1677-4115-afd9-55c859473059",
+            "label": "bg_rect",
+            "components": [],
+            "originX": 0,
+            "originY": 0,
+            "isFilled": true,
+            "fillColor": "#0f1319",
+            "width": 1600,
+            "height": 900
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "a0226c03-82e9-4bce-86ed-054c52e4e9e4",
+            "unlock": [
+                "x",
+                "y",
+                "btn_label"
+            ],
+            "label": "startMenuButton",
+            "btn_label": "Back Main Menu",
+            "components": [
+                "StartSceneOnClick"
+            ],
+            "StartSceneOnClick.sceneKey": "StartMenu",
+            "x": 391,
+            "y": 297,
+            "nestedPrefabs": [],
+            "list": []
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "ba577754-2a4c-4b62-beee-dd5b6423a910",
+            "unlock": [
+                "x",
+                "y",
+                "btn_label"
+            ],
+            "label": "loadSaveSlot0",
+            "btn_label": "Save 0",
+            "components": [],
+            "x": 395,
+            "y": 372,
+            "nestedPrefabs": [],
+            "list": []
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "7cfe99e8-dfb7-4f19-84f7-a4071fb82b0d",
+            "unlock": [
+                "x",
+                "y",
+                "btn_label"
+            ],
+            "label": "loadSaveSlot1",
+            "btn_label": "Save 1",
+            "components": [],
+            "x": 398,
+            "y": 415,
+            "nestedPrefabs": [],
+            "list": []
+        },
+        {
+            "prefabId": "e6ae9a58-a3a3-4939-9564-179bbf898e15",
+            "id": "7f7590bf-8ea5-4989-850d-ad888df9bf63",
+            "unlock": [
+                "x",
+                "y",
+                "btn_label"
+            ],
+            "label": "loadSaveSlot2",
+            "btn_label": "Save 2",
+            "components": [],
+            "x": 401,
+            "y": 467,
+            "nestedPrefabs": [],
+            "list": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
