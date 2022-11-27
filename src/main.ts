@@ -32,12 +32,12 @@ const game = new Phaser.Game({
       gravity: { y: 0 },
       debug: true,
     },
-	arcade: {
-	  debug: true
-	},
+    arcade: {
+      debug: true,
+    },
   },
   render: {
-	pixelArt: true
+    pixelArt: true,
   },
   scale: {
     mode: Phaser.Scale.ScaleModes.FIT,

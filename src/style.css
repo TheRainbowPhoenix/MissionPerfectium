@@ -4,5 +4,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+canvas {
+  width: 1280px !important;
+  height: 800px !important;
 }

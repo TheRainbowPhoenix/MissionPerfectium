@@ -114,8 +114,50 @@ export default class Level extends Phaser.Scene {
 
   initCamera() {
     const cam = this.cameras.main
+
+    let cameraOptions = {
+      x: 50, // x position of the camera (default = 0)
+      y: 50, // y position of the camera (default = 0)
+      width: 300, // width of the camera (default = game.config.width)
+      height: 500, // height of the camera (default = game.config.height)
+      top: 600, // Top bound of scroll (default = 0)
+      bottom: 3175, // Bottom bound of scroll (default = 5000)
+      wheel: true, // Does this camera use mouse wheel? (default = false)
+      drag: 0.9, // Reduces the scroll speed per game step in 10%. (default = 0.95)
+      minSpeed: 9, // Bellow this speed value (pixels/second), the scroll is stopped. (default = 4)
+      snap: true, // Does this camera use snap points? (default = false)
+      snapConfig: {
+        // Defines snap points
+        topMargin: 50, // y position of first snap point (default = 0)
+        padding: 50, // Space in pixels between snap points (default = 20)
+        deadZone: 0, // % of space between points not influenced by snap effect (0 - 1) (default = 0)
+      },
+    }
+
+    // let myCamera = new ScrollingCamera(this, cameraOptions)
+
+    const controlConfig = {
+      camera: this.cameras.main,
+      left: this.wasd.left,
+      right: this.wasd.right,
+      acceleration: 0.06,
+      drag: 0.0005,
+      maxSpeed: 1.0,
+    }
+
+    // TODO: fix the camera !!
+
+    // let controls = new Phaser.Cameras.Controls.SmoothedKeyControl(controlConfig)
+
     cam.setBounds(0, 0, this.layer.width, this.layer.height)
+    // cam.setSize(640, 400)
     cam.setRoundPixels(true)
+
+    cam.startFollow(this.player, true)
+    // cam.startFollow(this.player, true, 1, 1, 8, 2)
+    cam.setZoom(2)
+
+    // cam.followOffset.set(-300, 0)
   }
 
   /*initEnities()
