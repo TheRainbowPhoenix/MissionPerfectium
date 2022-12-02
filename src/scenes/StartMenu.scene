@@ -121,7 +121,10 @@
                             ],
                             "label": "BonusBtn",
                             "btn_label": "Bonuses",
-                            "components": [],
+                            "components": [
+                                "StartSceneOnClick"
+                            ],
+                            "StartSceneOnClick.sceneKey": "MMScene",
                             "x": 0,
                             "y": 120,
                             "nestedPrefabs": [],

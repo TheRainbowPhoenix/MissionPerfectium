@@ -86,6 +86,10 @@ export default class StartMenu extends Phaser.Scene {
 		// bonusBtn (prefab fields)
 		bonusBtn.btn_label = "Bonuses";
 
+		// bonusBtn (components)
+		const bonusBtnStartSceneOnClick = new StartSceneOnClick(bonusBtn);
+		bonusBtnStartSceneOnClick.sceneKey = "MMScene";
+
 		// quitBtn (prefab fields)
 		quitBtn.btn_label = "Quit Game";
 

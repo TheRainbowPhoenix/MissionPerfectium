@@ -7,6 +7,16 @@
                 "key": "chara"
             },
             {
+                "url": "assets/stub/shit/down.png",
+                "type": "image",
+                "key": "down"
+            },
+            {
+                "url": "assets/stub/shit/fall.png",
+                "type": "image",
+                "key": "fall"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
@@ -33,6 +43,11 @@
                 },
                 "type": "spritesheet",
                 "key": "JoystickAtlas_Big"
+            },
+            {
+                "url": "assets/stub/shit/jump.png",
+                "type": "image",
+                "key": "jump"
             },
             {
                 "url": "assets/L_Ground_G03.png",

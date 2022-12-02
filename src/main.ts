@@ -2,6 +2,7 @@ import Phaser from 'phaser'
 import Level from './scenes/Level'
 import Preload from './scenes/Preload'
 import StartMenu from './scenes/StartMenu'
+import MMScene from './scenes/MMScene'
 import SettingsScreen from './scenes/SettingsScreen'
 import SaveScreen from './scenes/UI/SaveScreen'
 
@@ -20,8 +21,9 @@ class Boot extends Phaser.Scene {
 }
 
 const game = new Phaser.Game({
-  width: 1280,
-  height: 800,
+  type: Phaser.AUTO,
+  width: 1280, // WIDTH
+  height: 800, // HEIGHT
   backgroundColor: '#2f2f2f',
   input: {
     gamepad: true,
@@ -29,21 +31,28 @@ const game = new Phaser.Game({
   physics: {
     default: 'arcade', // 'matter',
     matter: {
-      gravity: { y: 0 },
+      gravity: { y: 0.5 },
       debug: true,
     },
     arcade: {
+      tileBias: 140, // 20,
+      gravity: {
+        y: 3500, // 1
+      },
       debug: true,
+      debugShowBody: true,
+      debugShowStaticBody: true,
     },
   },
   render: {
-    pixelArt: true,
+    pixelArt: false,
   },
   scale: {
     mode: Phaser.Scale.ScaleModes.FIT,
+    autoRound: true,
     autoCenter: Phaser.Scale.Center.CENTER_BOTH,
   },
-  scene: [Boot, Preload, Level, StartMenu, SettingsScreen, SaveScreen],
+  scene: [Boot, Preload, Level, StartMenu, SettingsScreen, SaveScreen, MMScene],
 })
 
 game.scene.start('Boot')

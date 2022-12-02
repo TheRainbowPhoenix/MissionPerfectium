@@ -1,0 +1,73 @@
+{
+    "id": "351b968e-1da5-4d5b-b145-c017a2d7f21d",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "MMScene",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 800
+    },
+    "displayList": [
+        {
+            "type": "ArcadeImage",
+            "id": "c6948708-3509-4915-8d2c-31430a9d3907",
+            "label": "arcadeimage_1",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "L_Ground_G03"
+            },
+            "x": 661,
+            "y": 750,
+            "scaleX": 4,
+            "body.width": 303,
+            "body.height": 121
+        },
+        {
+            "type": "ArcadeSprite",
+            "id": "cdda5a02-9177-41f4-a564-d798fc3d00e3",
+            "label": "hasumi",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "down"
+            },
+            "x": 548,
+            "y": 583,
+            "body.width": 200,
+            "body.height": 200
+        },
+        {
+            "type": "Image",
+            "id": "a25d1145-6fff-4cda-a4ab-0a0df98d605e",
+            "label": "l_Ground_G03",
+            "components": [],
+            "texture": {
+                "key": "L_Ground_G03"
+            },
+            "x": 549,
+            "y": 195,
+            "scaleY": 0.02
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "c7d8a920-cdd5-4520-9dc7-16337edb0166",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "METHOD",
+            "object1": "hasumi",
+            "object2": "arcadeimage_1"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
