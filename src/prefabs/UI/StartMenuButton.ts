@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -78,10 +77,13 @@ export default class StartMenuButton extends Phaser.GameObjects.Container {
 		this.scene.events.once("scene-awake", () => this.awake());
 
 		/* START-USER-CTR-CODE */
-		this.setInteractive(new Phaser.Geom.Rectangle(4,4,352,32), Phaser.Geom.Rectangle.Contains)
+    this.setInteractive(
+      new Phaser.Geom.Rectangle(4, 4, 352, 32),
+      Phaser.Geom.Rectangle.Contains
+    )
 
-		// Write your code here.
-		/* END-USER-CTR-CODE */
+    // Write your code here.
+    /* END-USER-CTR-CODE */
 	}
 
 	private poly_bg_border: Phaser.GameObjects.Polygon;
@@ -91,70 +93,74 @@ export default class StartMenuButton extends Phaser.GameObjects.Container {
 	public onClick: ()=>void = () => {};
 
 	/* START-USER-CODE */
-	private _btn_selected: boolean = false;
+  private _btn_selected: boolean = false
 
-	awake() {
-		this.btn_text.text = this.btn_label || this.btn_text.text;
+  awake() {
+    this.btn_text.text = this.btn_label || this.btn_text.text
 
-		this.on("pointerup", () => {
-			console.log("this pointerup");
-		});
-	}
+    this.on('pointerup', () => {
+      console.log('this pointerup')
+    })
+  }
 
-	doSelect(select: boolean) {
-		if (select && !this._btn_selected) {
-			this._btn_selected = true;
+  doSelect(select: boolean) {
+    if (select && !this._btn_selected) {
+      this._btn_selected = true
 
-			this.poly_bg_border.fillColor = 0x21b9f4;
-			// this.poly_bg_color.fillColor = 0x21b9f4;
-			this.btn_text.setColor("#0f1319");
+      this.poly_bg_border.fillColor = 0x21b9f4
+      // this.poly_bg_color.fillColor = 0x21b9f4;
+      this.btn_text.setColor('#0f1319')
 
-			this.poly_bg_color.scene.add.tween({
-				targets: this.poly_bg_color,
-				alpha: {from: 1, to: 0},
-				// props: {
-				// 	y: "-=" + this.offset,
-				// },
-				ease: 'Cubic', //'Elastic',
-				yoyo: false,
-				repeat: 0,
-				duration: 800
-			});
-		}
+      this.poly_bg_color.scene.add.tween({
+        targets: this.poly_bg_color,
+        alpha: { from: 1, to: 0 },
+        // props: {
+        // 	y: "-=" + this.offset,
+        // },
+        ease: 'Cubic', //'Elastic',
+        yoyo: false,
+        repeat: 0,
+        duration: 800,
+      })
+    }
 
-		if (!select) {
-			this._btn_selected = false;
+    if (!select) {
+      this._btn_selected = false
 
-			this.poly_bg_border.fillColor = 0x0b416b;
-			// this.poly_bg_color.fillColor = 0x1c2028;
+      this.poly_bg_border.fillColor = 0x0b416b
+      // this.poly_bg_color.fillColor = 0x1c2028;
 
-			this.poly_bg_color.scene.add.tween({
-				targets: this.poly_bg_color,
-				alpha: {from: 0, to: 1},
-				// props: {
-				// 	y: "-=" + this.offset,
-				// },
-				ease: 'Cubic',
-				yoyo: false,
-				repeat: 0,
-				duration: 800
-			});
+      this.poly_bg_color.scene.add.tween({
+        targets: this.poly_bg_color,
+        alpha: { from: 0, to: 1 },
+        // props: {
+        // 	y: "-=" + this.offset,
+        // },
+        ease: 'Cubic',
+        yoyo: false,
+        repeat: 0,
+        duration: 800,
+      })
 
-			this.btn_text.setColor("#58e6f3");
-		}
-	}
+      this.btn_text.setColor('#58e6f3')
+    }
+  }
 
-	doBtnHover() {
-		this.doSelect(true);
-	}
+  doBtnHover() {
+    this.doSelect(true)
+  }
 
-	doBtnOut() {
-		this.doSelect(false);
-	}
+  doBtnOut() {
+    this.doSelect(false)
+  }
 
-	// Write your code here.
+  doBtnClick() {
+    this.onClick()
+  }
 
-	/* END-USER-CODE */
+  // Write your code here.
+
+  /* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */

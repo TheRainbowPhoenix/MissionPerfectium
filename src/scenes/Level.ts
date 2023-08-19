@@ -2,66 +2,62 @@
 
 /* START OF COMPILED CODE */
 
-import Phaser from 'phaser'
-import Player from '../prefabs/Player'
+import Phaser from "phaser";
+import Player from "../prefabs/Player";
 /* START-USER-IMPORTS */
 // import { createWorld, IWorld } from "bitecs";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
-  constructor() {
-    super('Level')
 
-    /* START-USER-CTR-CODE */
+	constructor() {
+		super("Level");
+
+		/* START-USER-CTR-CODE */
     // Write your code here.
     // this.world = createWorld()
     /* END-USER-CTR-CODE */
-  }
+	}
 
-  editorCreate(): void {
-    // map
-    const map = this.add.tilemap('test')
-    map.addTilesetImage('tiles', 'tiles')
+	editorCreate(): void {
 
-    // text
-    const text = this.add.text(397, 229, '', {})
-    text.setOrigin(0.5, 0.5)
-    text.text = 'TODO: My Game '
-    text.setStyle({ align: 'center', fontFamily: 'Arial', fontSize: '3em' })
+		// map
+		const map = this.add.tilemap("test");
+		map.addTilesetImage("tiles", "tiles");
 
-    // player
-    const player = new Player(this, 96, 220)
-    this.add.existing(player)
+		// text
+		const text = this.add.text(397, 229, "", {});
+		text.setOrigin(0.5, 0.5);
+		text.text = "TODO: My Game ";
+		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
 
-    // layer
-    const layer = map.createLayer('Tile Layer 1', ['tiles'], 0, 0)
+		// player
+		const player = new Player(this, 96, 220);
+		this.add.existing(player);
 
-    // lists
-    // const items: Array<any> = []
-    // const enemies: Array<any> = []
+		// layer
+		const layer = map.createLayer("Tile Layer 1", ["tiles"], 0, 0);
 
-    this.player = player
-    this.layer = layer
-    this.map = map
-    // this.items = items
-    // this.enemies = enemies
+		// lists
+		const items: Array<any> = [];
+		const enemies: Array<any> = [];
 
-    this.events.emit('scene-awake')
-  }
+		this.player = player;
+		this.layer = layer;
+		this.map = map;
+		this.items = items;
+		this.enemies = enemies;
 
-  private player!: Player
-  private layer!: Phaser.Tilemaps.TilemapLayer
-  private map!: Phaser.Tilemaps.Tilemap
-  //   private items!: Array<any>
-  //   private enemies!: Array<any>
-  private wasd!: {
-    jump: Phaser.Input.Keyboard.Key
-    left: Phaser.Input.Keyboard.Key
-    right: Phaser.Input.Keyboard.Key
-    crouch: Phaser.Input.Keyboard.Key
-  }
+		this.events.emit("scene-awake");
+	}
 
-  /* START-USER-CODE */
+	private player!: Player;
+	private layer!: Phaser.Tilemaps.TilemapLayer;
+	private map!: Phaser.Tilemaps.Tilemap;
+	private items!: Array<any>;
+	private enemies!: Array<any>;
+
+	/* START-USER-CODE */
   /*init()
 	{
 		this.cursors = this.input.keyboard.createCursorKeys()

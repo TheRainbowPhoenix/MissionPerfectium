@@ -154,6 +154,11 @@ export default class StartMenu extends Phaser.Scene {
 
     if (order == 0) {
       console.log('Do button click !')
+      // TODO: do better !!
+      let btn = this.menuButtons[this.menuButtonsIndex] // .doBtnClick()
+      // @ts-ignore
+      btn.__StartSceneOnClick?.sceneKey && // @ts-ignore
+        this.scene.start(btn.__StartSceneOnClick.sceneKey)
     } else {
       console.log(this.menuButtonsIndex)
       this.menuButtons[this.menuButtonsIndex].doSelect(false)
@@ -191,6 +196,9 @@ export default class StartMenu extends Phaser.Scene {
           this.lastGamepadKey = t
         }
       } else {
+        spaceJustPressed =
+          spaceJustPressed ||
+          Phaser.Input.Keyboard.JustDown(this.cursors.space!)
       }
     }
 

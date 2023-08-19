@@ -2,34 +2,35 @@
 
 /* START OF COMPILED CODE */
 
-import UserComponent from './UserComponent'
-import Phaser from 'phaser'
+import UserComponent from "./UserComponent";
+import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
 export default class PhysicsBody extends UserComponent {
-  constructor(gameObject: Phaser.GameObjects.Image) {
-    super(gameObject)
 
-    this.gameObject = gameObject
-    ;(gameObject as any)['__PhysicsBody'] = this
+	constructor(gameObject: Phaser.GameObjects.Image) {
+		super(gameObject);
 
-    /* START-USER-CTR-CODE */
+		this.gameObject = gameObject;
+		(gameObject as any)["__PhysicsBody"] = this;
+
+		/* START-USER-CTR-CODE */
     // Write your code here.
     /* END-USER-CTR-CODE */
-  }
+	}
 
-  static getComponent(gameObject: Phaser.GameObjects.Image): PhysicsBody {
-    return (gameObject as any)['__PhysicsBody']
-  }
+	static getComponent(gameObject: Phaser.GameObjects.Image): PhysicsBody {
+		return (gameObject as any)["__PhysicsBody"];
+	}
 
-  private gameObject: Phaser.GameObjects.Image
-  public bodyX: number = 0
-  public bodyY: number = 0
-  public bodyWidth: number = 0
-  public bodyHeight: number = 0
+	private gameObject: Phaser.GameObjects.Image;
+	public bodyX: number = 0;
+	public bodyY: number = 0;
+	public bodyWidth: number = 0;
+	public bodyHeight: number = 0;
 
-  /* START-USER-CODE */
+	/* START-USER-CODE */
 
   start() {
     /** @type {Phaser.Physics.Arcade.Body} */

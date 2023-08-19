@@ -2,31 +2,32 @@
 
 /* START OF COMPILED CODE */
 
-import UserComponent from './UserComponent'
-import Phaser from 'phaser'
+import UserComponent from "./UserComponent";
+import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
 export default class Physics extends UserComponent {
-  constructor(gameObject: Phaser.GameObjects.Image) {
-    super(gameObject)
 
-    this.gameObject = gameObject
-    ;(gameObject as any)['__Physics'] = this
+	constructor(gameObject: Phaser.GameObjects.Image) {
+		super(gameObject);
 
-    /* START-USER-CTR-CODE */
+		this.gameObject = gameObject;
+		(gameObject as any)["__Physics"] = this;
+
+		/* START-USER-CTR-CODE */
     // Write your code here.
     /* END-USER-CTR-CODE */
-  }
+	}
 
-  static getComponent(gameObject: Phaser.GameObjects.Image): Physics {
-    return (gameObject as any)['__Physics']
-  }
+	static getComponent(gameObject: Phaser.GameObjects.Image): Physics {
+		return (gameObject as any)["__Physics"];
+	}
 
-  private gameObject: Phaser.GameObjects.Image
-  public bodyGravity: number = 0
+	private gameObject: Phaser.GameObjects.Image;
+	public bodyGravity: number = 0;
 
-  /* START-USER-CODE */
+	/* START-USER-CODE */
 
   start() {
     this.gameObject.scene.physics.add.existing(this.gameObject)

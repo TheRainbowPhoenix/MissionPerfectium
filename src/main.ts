@@ -31,13 +31,11 @@ const game = new Phaser.Game({
   physics: {
     default: 'arcade', // 'matter',
     matter: {
-      gravity: { y: 0.5 },
       debug: true,
     },
     arcade: {
-      tileBias: 140, // 20,
       gravity: {
-        y: 3500, // 1
+        y: 10, // 1
       },
       debug: true,
       debugShowBody: true,

@@ -1,8 +1,4 @@
 {
-    "plugins": [],
-    "skip": [
-        "dist",
-        "node_modules",
-        "test_nwjs"
-    ]
+  "plugins": ["src/plugins/pho3.matter.js"],
+  "skip": ["dist", "node_modules", "test_nwjs"]
 }

@@ -2,8 +2,10 @@
     "id": "351b968e-1da5-4d5b-b145-c017a2d7f21d",
     "sceneType": "SCENE",
     "settings": {
+        "javaScriptInitFieldsInConstructor": true,
         "exportClass": true,
         "autoImport": true,
+        "superClassName": "GameScene",
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "MMScene",
@@ -28,20 +30,6 @@
             "body.height": 121
         },
         {
-            "type": "ArcadeSprite",
-            "id": "cdda5a02-9177-41f4-a564-d798fc3d00e3",
-            "label": "hasumi",
-            "scope": "CLASS",
-            "components": [],
-            "texture": {
-                "key": "down"
-            },
-            "x": 548,
-            "y": 583,
-            "body.width": 200,
-            "body.height": 200
-        },
-        {
             "type": "Image",
             "id": "a25d1145-6fff-4cda-a4ab-0a0df98d605e",
             "label": "l_Ground_G03",
@@ -52,6 +40,82 @@
             "x": 549,
             "y": 195,
             "scaleY": 0.02
+        },
+        {
+            "type": "Layer",
+            "id": "137da5c8-89da-4fe3-880b-12566a9e8dc9",
+            "label": "ground_layer",
+            "scope": "CLASS",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "bfc29ee3-6e2d-47b9-a2e3-a438cb667c3d",
+                    "id": "ad3f0595-9ebd-458e-94e3-e4e64a992c62",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "width",
+                        "height"
+                    ],
+                    "label": "invisibleWallPrefab",
+                    "components": [],
+                    "x": 1197,
+                    "y": 331,
+                    "width": 32,
+                    "height": 1024
+                },
+                {
+                    "prefabId": "357bf68a-895d-4ea6-b782-7f8adf259530",
+                    "id": "ac10bbb3-bfde-4900-94ae-f2c4adf40bda",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "stairsPrefab",
+                    "components": [],
+                    "x": 195,
+                    "y": 563
+                },
+                {
+                    "prefabId": "81eb77c2-e79e-4677-86a6-a8200bbb650c",
+                    "id": "a87168e5-d90f-4e6f-b1c6-dee50d092408",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "floorPrefab_1",
+                    "components": [],
+                    "x": 1495,
+                    "y": 750
+                },
+                {
+                    "prefabId": "81eb77c2-e79e-4677-86a6-a8200bbb650c",
+                    "id": "01cb30b8-45fe-4f33-8a6e-eb49325a1c91",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "floorPrefab",
+                    "components": [],
+                    "x": 490,
+                    "y": 750
+                }
+            ]
+        },
+        {
+            "prefabId": "56c50de6-cdec-4abe-b304-b646debc3d62",
+            "id": "4246da25-6cf3-47e4-b658-fc230bf43b85",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "hasumi",
+            "scope": "CLASS",
+            "components": [],
+            "x": 718,
+            "y": 526,
+            "nestedPrefabs": [],
+            "list": []
         }
     ],
     "plainObjects": [
