@@ -1,0 +1,68 @@
+{
+    "id": "56c50de6-cdec-4abe-b304-b646debc3d62",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 200,
+        "borderHeight": 200
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "83f5fe0e-1382-4181-8cd3-9fd385025dd5",
+            "label": "container_1",
+            "components": [],
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "17d51637-dbe9-4bfe-9137-e2874380eff0",
+                    "label": "texture",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "down"
+                    }
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "68491f60-1453-41b4-8d59-b1e09ede1fa9",
+                    "label": "groundSensor",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 8,
+                    "y": 102,
+                    "isFilled": true,
+                    "fillAlpha": 0.1,
+                    "width": 120,
+                    "height": 8
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "4c06f731-a00a-44df-b90a-ee9f64718db6",
+                    "label": "hasumiBody",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -2,
+                    "y": -1,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.4,
+                    "width": 50,
+                    "height": 200
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

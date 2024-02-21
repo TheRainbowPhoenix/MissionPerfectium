@@ -17,6 +17,11 @@
                 "key": "fall"
             },
             {
+                "url": "assets/stub/mm/floor.png",
+                "type": "image",
+                "key": "floor"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
@@ -68,6 +73,11 @@
                 },
                 "type": "svg",
                 "key": "perfectium"
+            },
+            {
+                "url": "assets/stub/mm/RightStair.png",
+                "type": "image",
+                "key": "RightStair"
             },
             {
                 "url": "assets/tank_blue.png",

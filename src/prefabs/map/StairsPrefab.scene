@@ -1,0 +1,33 @@
+{
+    "id": "357bf68a-895d-4ea6-b782-7f8adf259530",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 800
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "3cbb7c72-68ae-4b5f-9638-17f5f9b15f82",
+            "label": "stairsImage",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "RightStair"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
